@@ -1,0 +1,575 @@
+=========================================================
+              JAVA PROGRAMMING NOTES
+           PART 3 - LOOPS IN JAVA
+=========================================================
+
+---------------------------------------------------------
+1. LOOPS
+---------------------------------------------------------
+
+Definition:
+A loop is used to execute a block of code repeatedly
+until a specified condition becomes false.
+
+Advantages:
+• Reduces code repetition
+• Saves time
+• Makes programs easier to maintain
+
+Types of Loops:
+1. for loop
+2. while loop
+3. do-while loop
+
+=========================================================
+2. for LOOP
+=========================================================
+
+Definition:
+Used when the number of iterations is known.
+
+Syntax:
+
+for(initialization; condition; increment/decrement)
+{
+    statements;
+}
+
+Flow:
+
+Initialization
+      ↓
+Condition
+      ↓
+Statements
+      ↓
+Increment/Decrement
+      ↓
+Condition Again
+
+Example:
+
+for(int i = 1; i <= 5; i++)
+{
+    System.out.println(i);
+}
+
+Output:
+
+1
+2
+3
+4
+5
+
+=========================================================
+3. while LOOP
+=========================================================
+
+Definition:
+Executes the block while the condition is true.
+
+Syntax:
+
+initialization;
+
+while(condition)
+{
+    statements;
+    increment/decrement;
+}
+
+Example:
+
+int i = 1;
+
+while(i <= 5)
+{
+    System.out.println(i);
+    i++;
+}
+
+Output:
+
+1
+2
+3
+4
+5
+
+=========================================================
+4. do-while LOOP
+=========================================================
+
+Definition:
+Executes the block at least once before checking
+the condition.
+
+Syntax:
+
+initialization;
+
+do
+{
+    statements;
+    increment/decrement;
+}
+while(condition);
+
+Example:
+
+int i = 1;
+
+do
+{
+    System.out.println(i);
+    i++;
+}
+while(i <= 5);
+
+Output:
+
+1
+2
+3
+4
+5
+
+=========================================================
+5. DIFFERENCE BETWEEN LOOPS
+=========================================================
+
+for Loop
+---------
+• Number of iterations is known.
+• Condition checked first.
+
+while Loop
+-----------
+• Used when iterations are unknown.
+• Condition checked first.
+
+do-while Loop
+--------------
+• Executes at least once.
+• Condition checked after execution.
+
+=========================================================
+6. break STATEMENT
+=========================================================
+
+Definition:
+Terminates the loop immediately.
+
+Example:
+
+for(int i = 1; i <= 10; i++)
+{
+    if(i == 6)
+    {
+        break;
+    }
+
+    System.out.println(i);
+}
+
+Output:
+
+1
+2
+3
+4
+5
+
+=========================================================
+7. continue STATEMENT
+=========================================================
+
+Definition:
+Skips the current iteration and moves to the next.
+
+Example:
+
+for(int i = 1; i <= 5; i++)
+{
+    if(i == 3)
+    {
+        continue;
+    }
+
+    System.out.println(i);
+}
+
+Output:
+
+1
+2
+4
+5
+
+=========================================================
+8. NESTED LOOP
+=========================================================
+
+Definition:
+A loop inside another loop.
+
+Syntax:
+
+for(...)
+{
+    for(...)
+    {
+        statements;
+    }
+}
+
+Example:
+
+for(int i = 1; i <= 3; i++)
+{
+    for(int j = 1; j <= 3; j++)
+    {
+        System.out.print("* ");
+    }
+
+    System.out.println();
+}
+
+Output:
+
+* * *
+* * *
+* * *
+
+=========================================================
+9. SUM OF NATURAL NUMBERS
+=========================================================
+
+Example:
+
+int sum = 0;
+
+for(int i = 1; i <= 10; i++)
+{
+    sum += i;
+}
+
+System.out.println(sum);
+
+Output:
+
+55
+
+=========================================================
+10. FACTORIAL PROGRAM
+=========================================================
+
+Example:
+
+int fact = 1;
+
+for(int i = 1; i <= 5; i++)
+{
+    fact *= i;
+}
+
+System.out.println(fact);
+
+Output:
+
+120
+
+=========================================================
+11. REVERSE A NUMBER
+=========================================================
+
+Example:
+
+int num = 1234;
+int reverse = 0;
+
+while(num > 0)
+{
+    int digit = num % 10;
+    reverse = reverse * 10 + digit;
+    num = num / 10;
+}
+
+System.out.println(reverse);
+
+Output:
+
+4321
+
+=========================================================
+12. PALINDROME NUMBER
+=========================================================
+
+Example:
+
+int num = 121;
+int temp = num;
+int reverse = 0;
+
+while(num > 0)
+{
+    int digit = num % 10;
+    reverse = reverse * 10 + digit;
+    num = num / 10;
+}
+
+if(temp == reverse)
+{
+    System.out.println("Palindrome");
+}
+else
+{
+    System.out.println("Not Palindrome");
+}
+
+Output:
+
+Palindrome
+
+=========================================================
+13. PRIME NUMBER
+=========================================================
+
+Example:
+
+int n = 13;
+boolean prime = true;
+
+for(int i = 2; i < n; i++)
+{
+    if(n % i == 0)
+    {
+        prime = false;
+        break;
+    }
+}
+
+if(prime)
+{
+    System.out.println("Prime");
+}
+else
+{
+    System.out.println("Not Prime");
+}
+
+Output:
+
+Prime
+
+=========================================================
+14. FIBONACCI SERIES
+=========================================================
+
+Example:
+
+int a = 0;
+int b = 1;
+
+System.out.print(a + " " + b + " ");
+
+for(int i = 3; i <= 10; i++)
+{
+    int c = a + b;
+    System.out.print(c + " ");
+    a = b;
+    b = c;
+}
+
+Output:
+
+0 1 1 2 3 5 8 13 21 34
+
+=========================================================
+15. SUM OF DIGITS
+=========================================================
+
+Example:
+
+int num = 1234;
+int sum = 0;
+
+while(num > 0)
+{
+    sum += num % 10;
+    num /= 10;
+}
+
+System.out.println(sum);
+
+Output:
+
+10
+
+=========================================================
+16. PATTERN PROGRAMS
+=========================================================
+
+Pattern 1
+
+*
+**
+***
+****
+*****
+
+Program:
+
+for(int i = 1; i <= 5; i++)
+{
+    for(int j = 1; j <= i; j++)
+    {
+        System.out.print("*");
+    }
+
+    System.out.println();
+}
+
+---------------------------------------------------------
+
+Pattern 2
+
+*****
+****
+***
+**
+*
+
+Program:
+
+for(int i = 5; i >= 1; i--)
+{
+    for(int j = 1; j <= i; j++)
+    {
+        System.out.print("*");
+    }
+
+    System.out.println();
+}
+
+---------------------------------------------------------
+
+Pattern 3
+
+1
+12
+123
+1234
+12345
+
+Program:
+
+for(int i = 1; i <= 5; i++)
+{
+    for(int j = 1; j <= i; j++)
+    {
+        System.out.print(j);
+    }
+
+    System.out.println();
+}
+
+=========================================================
+17. INFINITE LOOP
+=========================================================
+
+Definition:
+A loop that never ends because its condition
+always remains true.
+
+Example:
+
+while(true)
+{
+    System.out.println("Hello");
+}
+
+=========================================================
+18. COMMON LOOP MISTAKES
+=========================================================
+
+• Forgetting to update the loop variable.
+• Wrong loop condition.
+• Using '=' instead of '==' in conditions.
+• Missing braces '{}' for multiple statements.
+• Creating unintended infinite loops.
+
+=========================================================
+19. INTERVIEW QUESTIONS
+=========================================================
+
+Q1. Which loop executes at least once?
+
+Answer:
+do-while loop
+
+-----------------------------------
+
+Q2. Difference between break and continue?
+
+break
+------
+Terminates the loop completely.
+
+continue
+---------
+Skips only the current iteration.
+
+-----------------------------------
+
+Q3. Which loop is best when the number of
+iterations is known?
+
+Answer:
+for loop
+
+-----------------------------------
+
+Q4. Which loop is best when the number of
+iterations is unknown?
+
+Answer:
+while loop
+
+-----------------------------------
+
+Q5. Can we write a for loop without initialization?
+
+Yes.
+
+Example:
+
+int i = 1;
+
+for(; i <= 5; i++)
+{
+    System.out.println(i);
+}
+
+=========================================================
+20. QUICK REVISION
+=========================================================
+
+✓ for → Known number of iterations
+✓ while → Unknown number of iterations
+✓ do-while → Executes at least once
+✓ break → Exit loop
+✓ continue → Skip current iteration
+✓ Nested loop → Loop inside another loop
+✓ Factorial → Product of numbers
+✓ Prime → Exactly two factors
+✓ Palindrome → Same forward and backward
+✓ Fibonacci → Sum of previous two numbers
+✓ Reverse Number → Digits in reverse order
+✓ Sum of Digits → Add each digit
+✓ Pattern Programs → Built using nested loops
+
+=========================================================
+           END OF JAVA NOTES (UP TO LOOPS)
+=========================================================
