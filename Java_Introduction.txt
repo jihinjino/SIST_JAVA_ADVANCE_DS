@@ -1,0 +1,531 @@
+=========================================================
+               JAVA PROGRAMMING NOTES
+          PART 1 - INTRODUCTION TO OPERATORS
+=========================================================
+
+---------------------------------------------------------
+1. WHAT IS JAVA?
+---------------------------------------------------------
+
+Definition:
+Java is a high-level, object-oriented, platform-independent
+programming language developed by Sun Microsystems
+(now owned by Oracle).
+
+Features:
+• Simple
+• Object-Oriented
+• Platform Independent
+• Secure
+• Robust
+• Multithreaded
+• Portable
+• Distributed
+• Dynamic
+
+Java follows the principle:
+
+"Write Once, Run Anywhere (WORA)"
+
+---------------------------------------------------------
+2. HISTORY OF JAVA
+---------------------------------------------------------
+
+• Developed by James Gosling in 1995.
+• Originally called Oak.
+• Later renamed Java.
+• Owned by Oracle Corporation.
+
+---------------------------------------------------------
+3. JAVA EDITIONS
+---------------------------------------------------------
+
+1. Java SE (Standard Edition)
+   - Desktop Applications
+
+2. Java EE (Enterprise Edition)
+   - Web Applications
+
+3. Java ME (Micro Edition)
+   - Mobile Devices
+
+---------------------------------------------------------
+4. JDK, JRE, JVM
+---------------------------------------------------------
+
+JDK (Java Development Kit)
+--------------------------
+Used to develop Java applications.
+
+Contains:
+• JRE
+• Compiler (javac)
+• Debugger
+• Development Tools
+
+JRE (Java Runtime Environment)
+------------------------------
+Used to run Java programs.
+
+Contains:
+• JVM
+• Library Files
+
+JVM (Java Virtual Machine)
+--------------------------
+Responsible for executing Java Bytecode.
+
+Functions:
+• Loads bytecode
+• Verifies code
+• Executes program
+• Provides platform independence
+
+Flow:
+
+Java Program (.java)
+       ↓
+Compiler (javac)
+       ↓
+Bytecode (.class)
+       ↓
+JVM
+       ↓
+Output
+
+---------------------------------------------------------
+5. FIRST JAVA PROGRAM
+---------------------------------------------------------
+
+Syntax:
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Hello World");
+    }
+}
+
+Output:
+Hello World
+
+Explanation:
+
+public
+    Access modifier
+
+class
+    Keyword to create class
+
+Main
+    Class name
+
+main()
+    Entry point of program
+
+System.out.println()
+    Prints output with newline
+
+---------------------------------------------------------
+6. COMMENTS IN JAVA
+---------------------------------------------------------
+
+Single Line
+
+// This is a comment
+
+Multi Line
+
+/*
+This is
+a multi-line
+comment
+*/
+
+Documentation Comment
+
+/**
+ * Documentation
+ */
+
+---------------------------------------------------------
+7. VARIABLES
+---------------------------------------------------------
+
+Definition:
+A variable is a container used to store data.
+
+Syntax:
+
+datatype variableName;
+
+Example:
+
+int age = 20;
+
+Rules:
+• Cannot start with number
+• No spaces
+• Cannot use keywords
+• Case-sensitive
+
+Examples:
+
+int studentAge = 21;
+double salary = 25000.50;
+char grade = 'A';
+
+---------------------------------------------------------
+8. DATA TYPES
+---------------------------------------------------------
+
+Primitive Data Types
+
+1. byte
+Size : 1 Byte
+Range : -128 to 127
+
+Example:
+byte a = 10;
+
+--------------------------------
+
+2. short
+Size : 2 Bytes
+
+Example:
+short s = 200;
+
+--------------------------------
+
+3. int
+Size : 4 Bytes
+
+Example:
+int num = 100;
+
+--------------------------------
+
+4. long
+Size : 8 Bytes
+
+Example:
+long phone = 9876543210L;
+
+--------------------------------
+
+5. float
+Size : 4 Bytes
+
+Example:
+float pi = 3.14f;
+
+--------------------------------
+
+6. double
+Size : 8 Bytes
+
+Example:
+double value = 99.99;
+
+--------------------------------
+
+7. char
+Size : 2 Bytes
+
+Example:
+char ch = 'A';
+
+--------------------------------
+
+8. boolean
+
+Values:
+true
+false
+
+Example:
+
+boolean isJavaEasy = true;
+
+---------------------------------------------------------
+9. NON-PRIMITIVE DATA TYPES
+---------------------------------------------------------
+
+Examples:
+
+String
+Array
+Class
+Object
+Interface
+
+Example:
+
+String name = "Rahul";
+
+---------------------------------------------------------
+10. KEYWORDS
+---------------------------------------------------------
+
+Keywords are reserved words.
+
+Examples:
+
+class
+public
+static
+void
+int
+float
+double
+if
+else
+switch
+while
+for
+break
+continue
+return
+new
+this
+
+---------------------------------------------------------
+11. IDENTIFIERS
+---------------------------------------------------------
+
+Definition:
+Names given to variables, methods, classes, etc.
+
+Example:
+
+int studentMarks;
+
+Valid:
+
+age
+studentName
+totalMarks
+
+Invalid:
+
+123age
+student-name
+class
+
+---------------------------------------------------------
+12. OPERATORS
+---------------------------------------------------------
+
+Definition:
+Operators perform operations on operands.
+
+Types:
+
+1. Arithmetic Operators
+2. Relational Operators
+3. Logical Operators
+4. Assignment Operators
+5. Unary Operators
+6. Ternary Operator
+7. Bitwise Operators
+
+---------------------------------------------------------
+13. ARITHMETIC OPERATORS
+---------------------------------------------------------
+
+Operator      Meaning
+
++             Addition
+-             Subtraction
+*             Multiplication
+/             Division
+%             Modulus
+
+Example:
+
+int a = 20;
+int b = 10;
+
+System.out.println(a+b);
+System.out.println(a-b);
+System.out.println(a*b);
+System.out.println(a/b);
+System.out.println(a%b);
+
+Output:
+
+30
+10
+200
+2
+0
+
+---------------------------------------------------------
+14. RELATIONAL OPERATORS
+---------------------------------------------------------
+
+==
+!=
+>
+<
+>=
+<=
+
+Example:
+
+int a = 20;
+int b = 30;
+
+System.out.println(a>b);
+
+Output:
+
+false
+
+---------------------------------------------------------
+15. LOGICAL OPERATORS
+---------------------------------------------------------
+
+&&   AND
+
+||   OR
+
+!    NOT
+
+Example:
+
+boolean x = true;
+boolean y = false;
+
+System.out.println(x && y);
+
+Output:
+
+false
+
+---------------------------------------------------------
+16. ASSIGNMENT OPERATORS
+---------------------------------------------------------
+
+=
+
++=
+
+-=
+
+*=
+
+/=
+
+%=
+
+Example:
+
+int x = 10;
+
+x += 5;
+
+System.out.println(x);
+
+Output:
+
+15
+
+---------------------------------------------------------
+17. UNARY OPERATORS
+---------------------------------------------------------
+
+Increment
+
+++
+
+Decrement
+
+--
+
+Example:
+
+int a = 10;
+
+a++;
+
+System.out.println(a);
+
+Output:
+
+11
+
+---------------------------------------------------------
+18. TERNARY OPERATOR
+---------------------------------------------------------
+
+Syntax:
+
+condition ? trueValue : falseValue;
+
+Example:
+
+int age = 18;
+
+String result =
+(age >= 18) ? "Eligible" : "Not Eligible";
+
+Output:
+
+Eligible
+
+---------------------------------------------------------
+19. OPERATOR PRECEDENCE
+---------------------------------------------------------
+
+Highest
+
+()
+++
+--
+!
+*, /, %
++, -
+<, >, <=, >=
+==, !=
+&&
+||
+=
+Lowest
+
+---------------------------------------------------------
+20. IMPORTANT INTERVIEW QUESTIONS
+---------------------------------------------------------
+
+Q1. Difference between JDK, JRE and JVM?
+
+JDK -> Development
+JRE -> Execution
+JVM -> Runs Bytecode
+
+--------------------------------
+
+Q2. Why Java is Platform Independent?
+
+Because JVM executes bytecode on every operating system.
+
+--------------------------------
+
+Q3. Why main() is static?
+
+Because JVM calls it without creating an object.
+
+--------------------------------
+
+Q4. Difference between float and double?
+
+float  -> 4 Bytes
+double -> 8 Bytes
+
+double is more precise.
+
+=========================================================
+END OF PART 1
+=========================================================
