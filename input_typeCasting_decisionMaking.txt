@@ -1,0 +1,504 @@
+=========================================================
+              JAVA PROGRAMMING NOTES
+        PART 2 - INPUT, TYPE CASTING & DECISION MAKING
+=========================================================
+
+---------------------------------------------------------
+1. TYPE CASTING
+---------------------------------------------------------
+
+Definition:
+Type casting is the process of converting one data type
+into another.
+
+There are two types:
+
+1. Implicit Type Casting (Widening)
+2. Explicit Type Casting (Narrowing)
+
+=========================================================
+2. IMPLICIT TYPE CASTING (Widening)
+=========================================================
+
+Definition:
+Converting a smaller data type into a larger data type
+automatically.
+
+Order:
+
+byte → short → int → long → float → double
+
+Example:
+
+int a = 50;
+double b = a;
+
+System.out.println(b);
+
+Output:
+50.0
+
+Advantages:
+• Automatic conversion
+• No data loss
+
+=========================================================
+3. EXPLICIT TYPE CASTING (Narrowing)
+=========================================================
+
+Definition:
+Converting a larger data type into a smaller data type
+manually.
+
+Syntax:
+
+datatype variable = (datatype) value;
+
+Example:
+
+double num = 25.75;
+int value = (int) num;
+
+System.out.println(value);
+
+Output:
+25
+
+Note:
+Decimal part is removed.
+
+=========================================================
+4. TAKING INPUT USING SCANNER
+=========================================================
+
+Scanner class belongs to:
+
+java.util package
+
+Import Statement:
+
+import java.util.Scanner;
+
+Syntax:
+
+Scanner sc = new Scanner(System.in);
+
+=========================================================
+5. INPUT METHODS
+=========================================================
+
+Method              Data Type
+
+nextInt()           int
+nextDouble()        double
+nextFloat()         float
+nextLong()          long
+nextShort()         short
+nextByte()          byte
+nextBoolean()       boolean
+next()              Single Word
+nextLine()          Complete Sentence
+
+=========================================================
+6. EXAMPLE PROGRAM
+=========================================================
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Name : ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Age : ");
+        int age = sc.nextInt();
+
+        System.out.println("Name : " + name);
+        System.out.println("Age : " + age);
+    }
+}
+
+Output:
+
+Enter Name : Rahul
+Enter Age : 21
+
+Name : Rahul
+Age : 21
+
+=========================================================
+7. IMPORTANT NOTE
+=========================================================
+
+next()
+
+Reads only one word.
+
+Example:
+
+Hello World
+
+Output:
+Hello
+
+--------------------------------------------
+
+nextLine()
+
+Reads complete sentence.
+
+Example:
+
+Hello World
+
+Output:
+Hello World
+
+=========================================================
+8. DECISION MAKING STATEMENTS
+=========================================================
+
+Java provides:
+
+1. if
+2. if-else
+3. else-if ladder
+4. Nested if
+5. switch
+
+=========================================================
+9. if STATEMENT
+=========================================================
+
+Definition:
+
+Executes a block only if condition is true.
+
+Syntax:
+
+if(condition)
+{
+    statements;
+}
+
+Example:
+
+int age = 20;
+
+if(age >= 18)
+{
+    System.out.println("Eligible");
+}
+
+Output:
+
+Eligible
+
+=========================================================
+10. if-else
+=========================================================
+
+Syntax:
+
+if(condition)
+{
+    statements;
+}
+else
+{
+    statements;
+}
+
+Example:
+
+int number = 15;
+
+if(number % 2 == 0)
+{
+    System.out.println("Even");
+}
+else
+{
+    System.out.println("Odd");
+}
+
+Output:
+
+Odd
+
+=========================================================
+11. else-if LADDER
+=========================================================
+
+Definition:
+
+Used when multiple conditions are checked.
+
+Syntax:
+
+if(condition1)
+{
+
+}
+else if(condition2)
+{
+
+}
+else if(condition3)
+{
+
+}
+else
+{
+
+}
+
+Example:
+
+int marks = 82;
+
+if(marks >= 90)
+{
+    System.out.println("Grade A");
+}
+else if(marks >= 75)
+{
+    System.out.println("Grade B");
+}
+else if(marks >= 50)
+{
+    System.out.println("Grade C");
+}
+else
+{
+    System.out.println("Fail");
+}
+
+Output:
+
+Grade B
+
+=========================================================
+12. NESTED if
+=========================================================
+
+Definition:
+
+An if statement inside another if statement.
+
+Example:
+
+int age = 20;
+boolean voterId = true;
+
+if(age >= 18)
+{
+    if(voterId)
+    {
+        System.out.println("Can Vote");
+    }
+}
+
+Output:
+
+Can Vote
+
+=========================================================
+13. switch STATEMENT
+=========================================================
+
+Definition:
+
+Used to select one block from multiple choices.
+
+Syntax:
+
+switch(expression)
+{
+case value1:
+    statements;
+    break;
+
+case value2:
+    statements;
+    break;
+
+default:
+    statements;
+}
+
+=========================================================
+14. switch EXAMPLE
+=========================================================
+
+int day = 3;
+
+switch(day)
+{
+case 1:
+    System.out.println("Monday");
+    break;
+
+case 2:
+    System.out.println("Tuesday");
+    break;
+
+case 3:
+    System.out.println("Wednesday");
+    break;
+
+default:
+    System.out.println("Invalid");
+}
+
+Output:
+
+Wednesday
+
+=========================================================
+15. break IN switch
+=========================================================
+
+Definition:
+
+Stops execution after the matching case.
+
+Without break:
+
+case 1:
+System.out.println("One");
+
+case 2:
+System.out.println("Two");
+
+Output:
+
+One
+Two
+
+This is called Fall Through.
+
+=========================================================
+16. NESTED if vs else-if
+=========================================================
+
+Nested if
+---------
+• if inside another if
+• Used for dependent conditions
+
+else-if
+--------
+• Checks multiple independent conditions
+• Stops when first true condition is found
+
+=========================================================
+17. COMMON PROGRAMS
+=========================================================
+
+Check Positive or Negative
+
+int num = -5;
+
+if(num > 0)
+{
+    System.out.println("Positive");
+}
+else if(num < 0)
+{
+    System.out.println("Negative");
+}
+else
+{
+    System.out.println("Zero");
+}
+
+--------------------------------------------
+
+Largest of Two Numbers
+
+int a = 15;
+int b = 20;
+
+if(a > b)
+{
+    System.out.println(a);
+}
+else
+{
+    System.out.println(b);
+}
+
+--------------------------------------------
+
+Check Leap Year
+
+int year = 2024;
+
+if((year % 4 == 0 && year % 100 != 0)
+      || year % 400 == 0)
+{
+    System.out.println("Leap Year");
+}
+else
+{
+    System.out.println("Not Leap Year");
+}
+
+=========================================================
+18. INTERVIEW QUESTIONS
+=========================================================
+
+Q1. Difference between next() and nextLine()?
+
+next()
+→ Reads one word
+
+nextLine()
+→ Reads an entire line
+
+--------------------------------------------
+
+Q2. Difference between if and switch?
+
+if
+→ Works with all boolean conditions.
+
+switch
+→ Best for multiple fixed values.
+
+--------------------------------------------
+
+Q3. Why use break in switch?
+
+To stop execution after the matched case.
+
+--------------------------------------------
+
+Q4. What is Fall Through?
+
+Execution continues into the next case
+when break is omitted.
+
+=========================================================
+19. QUICK REVISION
+=========================================================
+
+✓ Widening = Automatic
+✓ Narrowing = Manual
+✓ Scanner is used for input.
+✓ next() → One word
+✓ nextLine() → Full line
+✓ if → Single condition
+✓ if-else → Two choices
+✓ else-if → Multiple conditions
+✓ switch → Multiple fixed values
+✓ break → Exit switch
+
+=========================================================
+END OF PART 2
+=========================================================
